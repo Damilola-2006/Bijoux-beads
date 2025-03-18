@@ -1,0 +1,179 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: white;
+    color: black;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: #0000B4;
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* Icons Container */
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Space between dark mode & cart icon */
+    position: absolute;
+    right: 50px; /* Moves both icons slightly away from the edge */
+    top: 15px;
+}
+
+/* Dark Mode Toggle */
+#dark-mode-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: white; /* Default color */
+    display: flex;
+    align-items: center;
+}
+
+/* Cart Icon */
+.cart-icon {
+    font-size: 24px;
+    text-decoration: none;
+    color: white;
+    position: relative;
+}
+
+/* Cart Count Badge */
+.cart-count {
+    background: red;
+    color: white;
+    border-radius: 50%;
+    padding: 3px 7px;
+    font-size: 14px;
+    position: absolute;
+    top: -8px;
+    right: -10px;
+}
+
+/* Dark Mode */
+.dark-mode {
+    background-color: #222;
+    color: white;
+}
+
+/* Dark Mode Header */
+.dark-mode header {
+    background-color: #333;
+}
+
+/* Dark Mode Button Color */
+.dark-mode #dark-mode-toggle {
+    color: yellow;
+}
+
+/* Container */
+.container {
+    padding: 80px 20px 20px; /* Adjust for fixed header */
+}
+
+/* Product Grid */
+#product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Product Card */
+.product-card {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Hover Effect */
+.product-card:hover {
+    transform: scale(1.03);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Product Image */
+.product-card img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Add to Cart Button */
+.add-to-cart {
+    background: blue;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.add-to-cart:hover {
+    background: darkblue;
+}
+
+/* Dark Mode Adjustments */
+.dark-mode .product-card {
+    background: #1a273a;
+    color: white;
+    border-color: #555;
+}
+
+.dark-mode .add-to-cart {
+    background: white;
+    color: blue;
+}
+
+.dark-mode .add-to-cart:hover {
+    background: white;
+    color: blue;
+}
+
+/* Cart Page */
+.cart-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.cart-item {
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cart-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.cart-item p {
+    font-size: 16px;
+    font-weight: bold;
+}
